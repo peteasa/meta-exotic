@@ -67,3 +67,8 @@ TARGET_LDFLAGS = "${EXOTIC_TARGET_LDFLAGS}"
 
 # Now use these updated variables with autotools
 inherit autotools
+
+# Now override things that we need changed
+# MULTIMACH_TARGET_SYS is used for STAMPCLEAN see bitbake.conf
+MULTIMACH_TARGET_SYS = "${PACKAGE_ARCH}${TARGET_VENDOR_GVARIABLE}-${TARGET_OS_GVARIABLE}"
+MULTIMACH_HOST_SYS = "${PACKAGE_ARCH}${HOST_VENDOR_GVARIABLE}-${HOST_OS_GVARIABLE}"
