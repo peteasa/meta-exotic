@@ -10,16 +10,11 @@
 
 # Typically autotools_exotic is inherited before this so 
 #   TARGET ??_GVARIABLE are set
-#   EXOTIC_?? 
+#   EXOTIC_??
+
+MODIFYTOS = "0"
+
 # Now use these updated variables with cross-canadian
 inherit cross-canadian
 
-#WAS STAGING_BINDIR_TOOLCHAIN = "${STAGING_DIR_NATIVE}${bindir_native}/${SDK_ARCH}${SDK_VENDOR}-${SDK_OS}:${STAGING_DIR_NATIVE}${bindir_native}/${TARGET_ARCH}${TARGET_VENDOR}-${TARGET_OS}"
-#STAGING_BINDIR_TOOLCHAIN = "${STAGING_DIR_NATIVE}${bindir_native}/${EXOTIC_HOST_ARCH}${EXOTIC_HOST_VENDOR}-${EXOTIC_HOST_OS}/${EXOTIC_TARGET_SYS}"
-
-# WAS ${TARGET_ARCH}${TARGET_VENDOR}-${TARGET_OS}
-#bindir = "${exec_prefix}/bin/${EXOTIC_TARGET_SYS}"
-# WAS ${TARGET_ARCH}${TARGET_VENDOR}-${TARGET_OS}
-#libdir = "${exec_prefix}/lib/${EXOTIC_TARGET_SYS}"
-# WAS ${TARGET_ARCH}${TARGET_VENDOR}-${TARGET_OS}
-#libexecdir = "${exec_prefix}/libexec/${EXOTIC_TARGET_SYS}"
+# Now override things that we need changed
