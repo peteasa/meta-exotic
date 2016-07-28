@@ -23,8 +23,9 @@ FILES_${PN}-staticdev = "	\
     ${prefix}/lib/${EXOTIC_TARGET_SYS}/*.a \
 	"
 
-# debugedit chokes on bare metal binaries
+# Not good to strip exotic binaries
 INHIBIT_PACKAGE_STRIP = "1"
+INHIBIT_SYSROOT_STRIP = "1"
 
 NEWLIBBUILDTREENAME = "newlib-build-internal-"
 

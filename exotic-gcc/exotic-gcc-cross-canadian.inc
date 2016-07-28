@@ -97,7 +97,9 @@ do_compile () {
 	oe_runmake all-host configure-target-libgcc
 }
 
+# Not good to strip exotic binaries
 INHIBIT_PACKAGE_STRIP = "1"
+INHIBIT_SYSROOT_STRIP = "1"
 
 # Having anything auto depending on gcc-cross-sdk is a really bad idea...
 EXCLUDE_FROM_SHLIBS = "1"
