@@ -26,7 +26,7 @@ INSANE_SKIP_${PN} += "arch"
 INSANE_SKIP_${PN}-dbg += "arch"
 INSANE_SKIP_${PN}-dev += "arch"
 
-RPROVIDES_${PN} += "${PN}-symlinks"
+RPROVIDES_${PN} += " ${PN}-symlinks ${PN}-staticdev "
 
 # Rather than duplicating multiple entries for these, make one
 # list and reuse it.
