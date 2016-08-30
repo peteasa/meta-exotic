@@ -59,6 +59,9 @@ PROVIDES = "virtual/${EXOTIC_TARGET_PREFIX}compilerlibs ${EXOTIC_TARGET_PREFIX}g
 # Can we use the parallella-hdmi sysroot version for the sdk?  Uncomment if we need sdk version
 # BBCLASSEXTEND = "nativesdk"
 
+# Ensure that static libraries are built
+DISABLE_STATIC = ""
+
 PACKAGES = "\
     ${PN}-dbg \
     ${PN}-libstdc++ \
