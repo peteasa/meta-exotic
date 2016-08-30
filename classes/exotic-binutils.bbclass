@@ -2,6 +2,8 @@ require exotic-binutils/exotic-binutils.inc
 
 DEPENDS += "flex bison zlib"
 
+## TODO install libiberty from either epiphany-elf-gcc or epiphany-elf-binutils!
+##      for now --disable-install-libiberty
 EXTRA_OECONF += "--with-sysroot=/ \
                 --enable-shared \
                 --disable-install-libiberty \
@@ -18,4 +20,10 @@ do_install_append() {
         # Remove rpath from the offending binaries
         chrpath -d ${D}${bindir}/${EXOTIC_TARGET_PREFIX}ar
         chrpath -d ${D}${bindir}/${EXOTIC_TARGET_PREFIX}ranlib
+
+        # Update libdir references in copied .la files
+        for i in `find ${D}${prefix}/lib/${EXOTIC_TARGET_SYS} -type f -name *.la`; do
+                sed -i -e 's#-L${B}/bfd/../libiberty/pic##g' $i
+                sed -i -e 's#-L${B}/opcodes/../libiberty/pic##g' $i
+        done
 }
