@@ -4,6 +4,8 @@
 ##          also much simpler so significant parts taken from libgcc
 ##
 
+require exotic-newlib/exotic-newlib-shared-source.inc
+
 ## virtual/${EXOTIC_TARGET_PREFIX}binutils - this is required by virtual/${EXOTIC_TARGET_PREFIX}gcc
 DEPENDS = "virtual/${EXOTIC_TARGET_PREFIX}gcc virtual/${EXOTIC_TARGET_PREFIX}g++"
 

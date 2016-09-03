@@ -4,6 +4,8 @@
 
 BPN = "libgloss"
 
+require exotic-newlib/exotic-newlib-shared-source.inc
+
 INHIBIT_DEFAULT_DEPS = "1"
 
 # Override bitbake.conf settings
