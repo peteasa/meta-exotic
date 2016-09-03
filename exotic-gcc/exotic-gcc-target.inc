@@ -42,6 +42,7 @@ PACKAGES = "\
 
 FILES_${PN} = "\
     ${bindir}/${EXOTIC_TARGET_PREFIX}gcov \
+    ${bindir}/${EXOTIC_TARGET_PREFIX}gcov-tool \
     ${bindir}/${EXOTIC_TARGET_PREFIX}gcc* \
     ${libexecdir}/gcc/${EXOTIC_TARGET_SYS}/${BINV}/collect2 \
     ${libexecdir}/gcc/${EXOTIC_TARGET_SYS}/${BINV}/cc* \

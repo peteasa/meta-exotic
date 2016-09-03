@@ -18,6 +18,7 @@ PACKAGES = "\
 
 FILES_${PN} = " \
     ${prefix}/lib/${EXOTIC_TARGET_SYS}/*.o \
+    ${prefix}/lib/${EXOTIC_TARGET_SYS}/nosys.specs \
 "
 FILES_${PN}-dev = "\
 "
