@@ -69,6 +69,7 @@ B = "${S}/build.${HOST_SYS}.${EXOTIC_TARGET_SYS}"
 EXTRA_OECONF = "--program-prefix=${EXOTIC_TARGET_PREFIX} \
                 --disable-werror \
                 --enable-plugins \
+                --disable-gdb \
                 ${LDGOLD} \
                 ${@bb.utils.contains('DISTRO_FEATURES', 'multiarch', '--enable-64-bit-bfd', '', d)}"
 
