@@ -140,6 +140,9 @@ do_install () {
 		rm -f ${D}${infodir}/dir
 	fi
 
+	# Removed unnecessary libraries that could not be removed earlier
+	rm -rf ${D}${libdir}/gcc/${EXOTIC_TARGET_SYS}/${BINV}/libcc1*.so*
+
 	# Cleanup some of the ${libdir}{,exec}/${EXOTIC_TARGET_PREFIX}gcc stuff ...
 	#rm -r ${D}${libdir}/gcc/${EXOTIC_TARGET_SYS}/${BINV}/install-tools
 	#rm -r ${D}${libexecdir}/gcc/${EXOTIC_TARGET_SYS}/${BINV}/install-tools
