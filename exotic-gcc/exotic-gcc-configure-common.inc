@@ -4,13 +4,16 @@ EXTRA_OECONF_BASE ?= ""
 EXTRA_OECONF_PATHS ?= ""
 EXTRA_OECONF_INITIAL ?= ""
 
+# Ensure that static libraries are built
+DISABLE_STATIC = ""
+
 # (following is overridden in
 #    exotic-cross-canadian.inc
 #    exotic-gcc-cross-initial.inc)
 
 EXTRA_OECONF = "\
     --with-gnu-ld \
-    --enable-shared \
+    --disable-shared \
     --enable-multilib \
     --enable-c99 \
     --disable-gdbtk \

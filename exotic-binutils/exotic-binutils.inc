@@ -2,6 +2,9 @@ DEPENDS = "autoconf-native"
 
 inherit autotools_exotic gettext multilib_header texinfo
 
+# Ensure that static libraries are built
+DISABLE_STATIC = ""
+
 FILES_${PN} = " \
 	${bindir}/* \
 	${prefix}/${EXOTIC_TARGET_SYS}/bin/* \

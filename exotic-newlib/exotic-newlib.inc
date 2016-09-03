@@ -7,6 +7,9 @@
 ## virtual/${EXOTIC_TARGET_PREFIX}binutils - this is required by virtual/${EXOTIC_TARGET_PREFIX}gcc
 DEPENDS = "virtual/${EXOTIC_TARGET_PREFIX}gcc virtual/${EXOTIC_TARGET_PREFIX}g++"
 
+# Ensure that static libraries are built
+DISABLE_STATIC = ""
+
 PACKAGES = "\
     ${PN} \
     ${PN}-dev \

@@ -26,6 +26,9 @@ EXTRA_OECONF += "--with-sysroot=${SDKPATH}/sysroots/${TUNE_PKGARCH}${EXOTIC_TARG
 #STAGING_BINDIR_CROSS = "${STAGING_DIR_NATIVE}${bindir_native}/${EXOTIC_TARGET_SYS}"
 ## etc .. see exotic-gcc-cross-canadian.inc
 
+# Ensure that static libraries are built
+DISABLE_STATIC = ""
+
 # Override bitbake.conf FILES_${PN} settings as appropriate
 FILES_${PN} = " \
     ${bindir}/* \
