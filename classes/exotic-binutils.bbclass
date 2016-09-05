@@ -5,7 +5,6 @@ DEPENDS += "flex bison zlib"
 ## TODO install libiberty from either epiphany-elf-gcc or epiphany-elf-binutils!
 ##      for now --disable-install-libiberty
 EXTRA_OECONF += "--with-sysroot=/ \
-                --enable-shared \
                 --disable-install-libiberty \
                 "
 
