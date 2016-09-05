@@ -15,7 +15,7 @@ require exotic-gcc/exotic-gcc-configure-common.inc
 # TODO fix up the correct path for the c++ include dir...
 EXTRA_OECONF = "\
     ${GCCMULTILIB} \
-    --disable-shared \
+    --enable-shared \
     --disable-gdbtk \
     --disable-werror \
     --enable-fast-install=N/A \

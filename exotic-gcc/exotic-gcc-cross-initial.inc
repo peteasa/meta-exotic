@@ -14,7 +14,7 @@ CROSS_TARGET_SYS_DIR_append = ".${PN}"
 EXTRA_OECONF = "\
     --with-newlib \
     --without-headers \
-    --disable-shared \
+    --enable-shared \
     --disable-threads \
     --disable-multilib \
     --disable-__cxa_atexit \

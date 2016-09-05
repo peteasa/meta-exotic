@@ -13,7 +13,7 @@ DISABLE_STATIC = ""
 
 EXTRA_OECONF = "\
     --with-gnu-ld \
-    --disable-shared \
+    --enable-shared \
     --enable-multilib \
     --enable-c99 \
     --disable-gdbtk \
